@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Company reviews | Management commitments</title>
+    <style>
+      __CSS__
+    </style>
+  </head>
+  <body>
+    <main class="workspace">
+      <header class="toolbar">
+        <div class="wordmark">Management commitments</div>
+        <a class="button" href="portfolio.json" download>Download data</a>
+      </header>
+      <section class="report-heading">
+        <p class="eyebrow">Company reviews</p>
+        <h1>What management said.<br />What the evidence shows.</h1>
+        <p class="summary">
+          Open a company to compare earlier guidance with later disclosures, inspect source evidence and
+          record your review.
+        </p>
+        <p id="dates" class="report-meta"></p>
+      </section>
+      <section id="stats" class="stats" aria-label="Review coverage"></section>
+      <div class="section-heading">
+        <h2>Companies</h2>
+        <span id="visible-count" aria-live="polite"></span>
+      </div>
+      <div class="filters">
+        <label class="sr-only" for="search">Search companies</label
+        ><input id="search" type="search" placeholder="Search company, ticker or finding" /><label
+          class="sr-only"
+          for="coverage-filter"
+          >Transcript coverage</label
+        ><select id="coverage-filter">
+          <option value="all">All coverage</option>
+          <option value="calls">Has transcripts</option>
+          <option value="release">Release only</option></select
+        ><label class="sr-only" for="sort">Sort companies</label
+        ><select id="sort">
+          <option value="company">Company A to Z</option>
+          <option value="attention">Most items to check</option></select
+        ><button class="button" id="clear" hidden>Clear filters</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Company / finding</th>
+              <th>Tracked</th>
+              <th>Compared</th>
+              <th>To check</th>
+              <th>Call coverage</th>
+            </tr>
+          </thead>
+          <tbody id="companies"></tbody>
+        </table>
+      </div>
+      <p id="empty" class="empty" hidden>No companies match these filters.</p>
+      <details class="limits">
+        <summary>Coverage and interpretation</summary>
+        <p>
+          These are curated historical reviews. A numerical result describes an earlier forecast against a
+          comparable disclosure; it is not an investment recommendation or a management honesty score. Some
+          targets remain conditional or open.
+        </p>
+        <p>
+          Sources were retrieved in October 2026 and may contain later corrections. Release-only coverage is
+          not earnings-call coverage. Each report exposes its acquisition failures and source gaps.
+        </p>
+      </details>
+      <footer>Source evidence and calculations stay with each company review.</footer>
+    </main>
+    <script type="application/json" id="portfolio-data">
+      __DATA__
+    </script>
+    <script>
+      __JS__;
+    </script>
+  </body>
+</html>

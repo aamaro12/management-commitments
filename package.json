@@ -1,0 +1,13 @@
+{
+  "name": "management-commitments-ui-tests",
+  "private": true,
+  "scripts": {
+    "test:ui": "node scripts/test_ui.cjs runs/demo/report/review.html",
+    "test:portfolio": "node scripts/test_portfolio_ui.cjs runs/demo/index/index.html",
+    "format:web": "prettier --write src/management_commitments/assets scripts/test_ui.cjs"
+  },
+  "devDependencies": {
+    "linkedom": "0.18.12",
+    "prettier": "3.6.2"
+  }
+}

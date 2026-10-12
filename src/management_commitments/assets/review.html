@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>__TITLE__</title>
+    <style>
+      __CSS__
+    </style>
+  </head>
+  <body>
+    <main class="workspace">
+      <header class="toolbar">
+        <div class="wordmark">Management commitments</div>
+        <div class="toolbar-actions">
+          <button id="export-data" class="button">Download data</button
+          ><button id="print" class="button">Print</button
+          ><button id="export-decisions" class="button primary">Export review</button>
+        </div>
+      </header>
+      <section class="report-heading">
+        <div id="breadcrumbs" class="breadcrumb"></div>
+        <div class="heading-row">
+          <div id="company-chip"></div>
+          <label id="company-switch-label" hidden
+            >Company<select id="company-switch" aria-label="Switch company"></select
+          ></label>
+        </div>
+        <div class="report-meta"><span id="as-of"></span><span id="mode-label"></span></div>
+        <p id="summary" class="summary"></p>
+      </section>
+      <section id="stats" class="stats" aria-label="Report summary"></section>
+      <nav class="tabs" aria-label="Report views">
+        <button class="nav-button active" data-view="queue" aria-current="page">
+          Priority items <span id="queue-count"></span></button
+        ><button class="nav-button" data-view="all">All commitments</button
+        ><button class="nav-button" data-view="attention">Needs review</button
+        ><button class="nav-button" data-view="sources">Sources</button>
+      </nav>
+      <div id="research-content">
+        <div class="section-heading">
+          <div>
+            <h2 id="view-title">Priority items</h2>
+            <p id="view-subtitle">The most material items to inspect first.</p>
+          </div>
+          <span id="visible-count"></span>
+        </div>
+        <div class="filters">
+          <input
+            id="search"
+            type="search"
+            placeholder="Search commitments"
+            aria-label="Search commitments"
+          /><select id="status-filter" aria-label="Filter by assessment">
+            <option value="all">All assessments</option></select
+          ><select id="period-filter" aria-label="Filter by target period">
+            <option value="all">All periods</option>
+          </select>
+          <details class="more-filters">
+            <summary>More filters</summary>
+            <div>
+              <label
+                >Topic<select id="topic-filter">
+                  <option value="all">All topics</option>
+                </select></label
+              ><label
+                >Sort<select id="sort">
+                  <option value="priority">Review priority</option>
+                  <option value="period">Target date</option>
+                  <option value="title">Title</option>
+                </select></label
+              >
+            </div>
+          </details>
+          <button id="clear-filters" class="button text-button" hidden>Clear filters</button>
+        </div>
+        <div id="cards" class="cards"></div>
+        <div id="empty" class="empty" hidden>
+          No matching commitments. Clear the filters to see the full list.
+        </div>
+        <button id="view-all" class="button view-all">View all commitments</button>
+      </div>
+      <section id="source-content" hidden>
+        <div class="section-heading">
+          <div>
+            <h2>Source coverage</h2>
+            <p>What was acquired, and what is missing.</p>
+          </div>
+        </div>
+        <div id="coverage" class="coverage-grid"></div>
+        <section class="panel">
+          <h3>Documents</h3>
+          <div id="source-list"></div>
+        </section>
+        <details class="panel">
+          <summary>Acquisition log</summary>
+          <div id="acquisition-log"></div>
+        </details>
+      </section>
+      <details class="limits">
+        <summary>Method and limitations <span id="review-state"></span></summary>
+        <div id="limitations"></div>
+      </details>
+      <footer>Independent Codex project · evidence and calculations remain open to review</footer>
+    </main>
+    <dialog id="export-dialog">
+      <form method="dialog">
+        <h2>Export your review</h2>
+        <p>Your decisions are saved in this browser. Export them to retain a local audit log.</p>
+        <label>Reviewer name<input id="reviewer" maxlength="100" placeholder="Your name" required /></label>
+        <div class="dialog-actions">
+          <button class="button" value="cancel" formnovalidate>Cancel</button
+          ><button id="download-review" class="button primary" value="download">Download decisions</button>
+        </div>
+      </form>
+    </dialog>
+    <div id="toast" role="status" aria-live="polite" hidden></div>
+    <script id="report-data" type="application/json">
+      __DATA__
+    </script>
+    <script>
+      __JS__;
+    </script>
+  </body>
+</html>

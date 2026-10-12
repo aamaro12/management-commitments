@@ -1,0 +1,22 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "management-commitments",
+  "version": "0.2.0",
+  "description": "Review company guidance and management commitments against later disclosures, with official-site collection, source evidence and Python comparisons.",
+  "author": { "name": "Alessandro Amaro" },
+  "license": "MIT",
+  "keywords": ["finance", "codex", "guidance", "research", "evaluation"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Management Commitments",
+        "shortDescription": "Track guidance against results",
+        "longDescription": "A local Codex workflow for comparing management statements across quarters. Scripts capture official documents and check evidence, dates, financial definitions and numerical comparisons. A self-contained review dashboard supports source inspection and exported analyst decisions. No additional model API key is required.",
+        "developerName": "Alessandro Amaro",
+        "category": "Productivity",
+        "capabilities": ["Read", "Write", "Interactive"],
+        "defaultPrompt": "Use $track-management-commitments to compare management guidance with later results and show the changes worth checking."
+      }
+    }
+  }
+}

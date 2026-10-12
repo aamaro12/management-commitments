@@ -1,0 +1,4 @@
+interface:
+  display_name: "Management Commitments"
+  short_description: "Track guidance against later financial evidence"
+  default_prompt: "Use $track-management-commitments to compare management's earlier commitments with later disclosures and show what needs checking."

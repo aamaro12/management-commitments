@@ -1,0 +1,127 @@
+h1 {
+  font-size: 34px;
+  line-height: 1.25;
+  letter-spacing: -1px;
+  font-weight: 600;
+  margin: 12px 0 18px;
+}
+.eyebrow {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0;
+}
+.summary {
+  max-width: 700px;
+}
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 28px 0 14px;
+}
+.section-heading h2 {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0;
+}
+.section-heading span {
+  font-size: 12px;
+  color: var(--muted);
+}
+.table-wrap {
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+th {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--muted);
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+}
+td {
+  vertical-align: top;
+  font-size: 13px;
+  padding: 20px 14px;
+  border-bottom: 1px solid var(--line);
+}
+td:first-child {
+  width: 58%;
+  min-width: 290px;
+  padding-left: 0;
+}
+th:first-child {
+  padding-left: 0;
+}
+.company-link {
+  font-size: 15px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+.ticker {
+  font-size: 11px;
+  color: var(--muted);
+  margin-left: 9px;
+}
+.finding {
+  font-size: 12px;
+  color: #556571;
+  line-height: 1.65;
+  max-width: 590px;
+  margin: 5px 0 0;
+}
+.coverage-label {
+  white-space: nowrap;
+  font-size: 11px;
+  color: var(--muted);
+}
+.number-cell {
+  font-variant-numeric: tabular-nums;
+  color: #3a4d5a;
+}
+.blocked-label {
+  color: var(--red);
+  font-size: 11px;
+  display: block;
+  margin-top: 7px;
+}
+tbody tr:hover {
+  background: #fafbfc;
+}
+@media (max-width: 760px) {
+  h1 {
+    font-size: 28px;
+  }
+  th,
+  td {
+    padding: 14px 10px;
+  }
+  .company-link {
+    font-size: 14px;
+  }
+  td:first-child {
+    min-width: 240px;
+  }
+  .finding {
+    font-size: 12px;
+  }
+  .filters select {
+    max-width: 170px;
+  }
+}
+@media print {
+  .filters,
+  header .button {
+    display: none;
+  }
+  td {
+    font-size: 11px;
+    padding: 12px 8px;
+  }
+}

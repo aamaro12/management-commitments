@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "management-commitments"
+version = "0.2.0"
+description = "Track management guidance and commitments against later evidence, with a Codex workflow and reproducible checks."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{name = "Alessandro Amaro"}]
+dependencies = []
+
+[project.optional-dependencies]
+pdf = ["pypdf[crypto]>=5,<7"]
+dev = ["ruff==0.17.0"]
+
+[project.scripts]
+commitments = "management_commitments.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+management_commitments = ["assets/*"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E9", "F63", "F7", "F82", "F401", "F841"]

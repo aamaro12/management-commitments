@@ -1,0 +1,13 @@
+{
+  "name": "management-commitments",
+  "version": "0.2.0",
+  "description": "Review management commitments against later evidence with Codex and Python.",
+  "author": { "name": "Alessandro Amaro" },
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Management Commitments",
+    "shortDescription": "Track guidance against results",
+    "defaultPrompt": "Use $track-management-commitments to compare management guidance with later results and show the changes worth checking."
+  }
+}
